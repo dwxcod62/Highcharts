@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Supply Summary</title>
+    </head>
+    <body>
+        <div style="display: flex">
+            <div>
+                <div class="select" style="margin-bottom: 10px">
+                    <label for="startYearSelect">Start Year:</label>
+                    <select id="startYearSelect"></select>
+                </div>
+                <div class="select" style="margin-bottom: 10px">
+                    <label for="endYearSelect">End Year:</label>
+                    <select id="endYearSelect"></select>
+                </div>
+                <div class="multi_select">
+                    <label for="scenarioSelect">Select Scenario:</label>
+                    <select id="scenarioSelect" multiple></select>
+                </div>
+            </div>
+            <div class="container-button" style="height: 30px; margin-left: 100px; margin-top: 100px">
+                <button onclick="updateChart()">Update Chart</button>
+            </div>
+        </div>
+        <div class="checkbox-wrapper-13" style="margin-bottom: 10px">
+            <input id="toggle-percent-checkbox" type="checkbox" />
+            <label for="c1-13">Percentage</label>
+        </div>
+        <div class="checkbox-wrapper-13">
+            <input id="view-by-monthly-checkbox" type="checkbox" />
+            <label for="c1-13">View by Monthly</label>
+        </div>
+        <div style="height: 100%; width: 100%">
+            <div style="position: relative">
+                <div id="chart" style="position: absolute; top: 0px; left: 0px; width: 1526.86px; height: 751.391px"></div>
+            </div>
+        </div>
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="http://blacklabel.github.io/grouped_categories/grouped-categories.js"></script>
+        <!-- SCRIPTS -->
+        <script src="scripts/setting.js"></script>
+        <script src="scripts/json.js"></script>
+        <script src="scripts/function.js"></script>
+        <script src="scripts/drawChart.js"></script>
+        <script src="scripts/PrepareData.js"></script>
+    </body>
+</html>

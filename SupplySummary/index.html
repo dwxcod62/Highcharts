@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Supply Summary</title>
+    </head>
+    <body>
+        <div>
+            <label for="startYearSelect">Start Year:</label>
+            <select id="startYearSelect"></select>
+            <label for="endYearSelect">End Year:</label>
+            <select id="endYearSelect"></select>
+            <label for="scenarioSelect">Select Scenario:</label>
+            <select id="scenarioSelect" multiple></select>
+            <button onclick="updateChart()">Update Chart</button>
+        </div>
+        <div>
+            <div id="chart" style="min-width: 310px; max-width: 1200px; margin: 0 auto"></div>
+        </div>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="http://blacklabel.github.io/grouped_categories/grouped-categories.js"></script>
+        <!-- SCRIPTS -->
+        <script src="scripts/setting.js"></script>
+        <script src="scripts/json.js"></script>
+        <script src="scripts/function.js"></script>
+        <script src="scripts/drawChart.js"></script>
+        <script src="scripts/PrepareData.js"></script>
+    </body>
+</html>
